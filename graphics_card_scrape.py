@@ -8,7 +8,7 @@ f = open(filename,'w')
 headers = 'brand, product_name, price, shipping\n'
 f.write(headers)
 url = "https://www.newegg.com/Video-Cards-Video-Devices/Category/ID-38"
-uclient = ureq('https://www.newegg.com/Video-Cards-Video-Devices/Category/ID-38')
+uclient = ureq(url)
 page_html = uclient.read()
 uclient.close()
 page_soup = soup(page_html,'html.parser')
